@@ -2,9 +2,19 @@
     <head>
         <title>首页</title>
         <link rel="stylesheet" href="../../../src/stylesheets/index.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+        <script type="text/javascript">
+        function update(){
+            $.ajax({
+                url:"/my/update",
+                type:"get"
+            });
+        }
+        </script>
     </head>
 
     <body>
+        <input type="button" onclick="update()" value="更新"/>
         <div class="index-text">
             <span >Hello my-koa2~</span>
             <div>create by zhouyilong～</div>
