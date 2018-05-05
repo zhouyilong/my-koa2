@@ -10,6 +10,7 @@ const path = require('path')
 const index = require('./routes/index')
 const users = require('./routes/users')
 const my=require('./routes/my')
+const tl=require('./routes/tl')
 //const image=require('./routes/image')
 
 // error handler
@@ -40,6 +41,7 @@ app.use(async (ctx, next) => {
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(my.routes(),my.allowedMethods())
+app.use(tl.routes(),tl.allowedMethods())
 //app.use(image.routes(),image.allowedMethods())
 
 // error-handling
